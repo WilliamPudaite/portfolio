@@ -67,7 +67,7 @@ a:hover {
 
 header {
   position: fixed;
-  top: 3rem; /* Ensure the header is at the top */
+  top: 3rem; 
   left: 50%;
   transform: translateX(-50%);
   padding: 0 2rem;
