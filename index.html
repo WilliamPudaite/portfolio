@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -14,31 +18,22 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <!-- <div class="logo"><a href="#home">Anthony</a></div> -->
-        <ul class="links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo">Anthony.</a>
 
-        <div class="toggle_btn">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </div>
+      <div class="bx bx-menu" id="menu-icon"></div>
 
-      <div class="dropdown_menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </div>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+
+        <span class="active-nav"></span>
+      </nav>
     </header>
 
     <section class="home" id="home">
@@ -47,7 +42,9 @@
       </div>
       <div class="home-content">
         <h1>Hi, It's <span>Anthony</span></h1>
-        <h3 class="typing-text">I'm a <span></span></h3>
+        <div class="text-animate">
+          <h3>I'm a <span id="typewriter-text"></span></h3>
+        </div>
         <p>
           I would like to gain experience in the field of Graphic Designing. I’m
           very much interested in Graphic designing and I would like to utilize
@@ -214,47 +211,61 @@
         </div>
       </div>
     </section>
+
     <section class="education" id="education">
       <h2 class="heading">My <span>Education</span></h2>
-      <div class="timeline">
-        <div class="container right">
-          <div class="content">
-            <div class="tag">
-              <h2>M.A MULTIMEDIA</h2>
+      <div class="education-row">
+        <div class="education-column">
+          <!-- <h3 class="title">Education</h3> -->
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content">
+                <div class="year">
+                  <i class="fa-regular fa-calendar"></i> 2013 - 2015
+                </div>
+                <h3>M.A MULTIMEDIA</h3>
+                <p>PAI International Learning Solution, Pune.</p>
+              </div>
             </div>
-            <div class="desc">PAI International Learning Solution, Pune.</div>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <div class="tag">
-              <h2>BACHELOR OF COMPUTER APPLICATION</h2>
+
+            <div class="education-content">
+              <div class="content">
+                <div class="year">
+                  <i class="fa-regular fa-calendar"></i> 2009 - 2012
+                </div>
+                <h3>BACHELOR OF COMPUTER APPLICATION</h3>
+                <p>Third Eye (SMU), Guwahati.</p>
+              </div>
             </div>
-            <div class="desc">Third Eye (SMU), Guwahati.</div>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <div class="tag">
-              <h2>HIGHER SEC. SCHOOL LEAVING CERTIFICATE (XII)</h2>
+
+            <div class="education-content">
+              <div class="content">
+                <div class="year">
+                  <i class="fa-regular fa-calendar"></i> 2009
+                </div>
+                <h3>HIGHER SEC. SCHOOL LEAVING CERTIFICATE (XII)</h3>
+                <p>
+                  Sielmat Christian Higher Sec. School, Churachandpur, Manipur.
+                </p>
+              </div>
             </div>
-            <div class="desc">
-              Sielmat Christian Higher Sec. School, Churachandpur, Manipur.
-            </div>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <div class="tag">
-              <h2>HIGH SCHOOL LEAVING CERTIFICATE (X)</h2>
-            </div>
-            <div class="desc">
-              Sielmat Christian Higher Sec. School, Churachandpur, Manipur.
+
+            <div class="education-content">
+              <div class="content">
+                <div class="year">
+                  <i class="fa-regular fa-calendar"></i> 2007
+                </div>
+                <h3>HIGH SCHOOL LEAVING CERTIFICATE (X)</h3>
+                <p>
+                  Sielmat Christian Higher Sec. School, Churachandpur, Manipur.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section class="experience" id="experience">
       <h2 class="heading">My <span>Experience</span></h2>
 
@@ -310,10 +321,21 @@
       <div class="contact">
         <h2 class="contact">
           You can contact me via email:
-          <a href="mailto:anthbuongpui@gmail.com">Send Email</a>
+          <a href="mailto:anthbuongpui@gmail.com"
+            ><i class="fa-solid fa-envelope"></i>Send Email</a
+          >
         </h2>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyrights & Copy by William Pudaite | ALL RIGHTS RESERVED.</p>
+        <div class="footer-iconTop">
+          <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
