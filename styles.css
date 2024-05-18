@@ -366,7 +366,7 @@ span {
   background: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
-  height: 100%;
+  height: -webkit-fill-available;
   border-left: 3px solid var(--bg-color);
   right: -8px;
   animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
